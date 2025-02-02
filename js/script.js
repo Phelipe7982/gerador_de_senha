@@ -1,11 +1,13 @@
+// Nossos elementos capturados do HTML por DOM
 const inputElement = document.querySelector("#password");
 const upperCaseCheckElement = document.querySelector("#uppercase-check");
 const numberCheckElement = document.querySelector("#number-check");
 const symbolCheckElement = document.querySelector("#symbol-check");
 const securityIndicatorBarElement = document.querySelector("#security-indicator-bar");
 
-let passwordLength = 16;
+let passwordLength = 16;        // Tamanho inicial da senha (definimos no HTML também como padrão o valor 16)
 
+// Função para gerar a senha aleatória
 function generatePassword() {
     let chars = "abcdefghijklmnopqrstuvwxyz";
 
@@ -38,6 +40,7 @@ function generatePassword() {
     calculateFontSize();
 }
 
+// Função para calcular a qualidade da senha e alterar a barra indicadora de segurança
 function calculateQuality() {
     // 20% -> crítico | 100% -> safe
     // T*0.35 + M*0.15 + N*0.25 + S*0.25 = 100
@@ -70,6 +73,7 @@ function calculateQuality() {
     }
 }
 
+// Função para calcular o tamanho da fonte da senha
 function calculateFontSize() {
     if (passwordLength > 45) {
         inputElement.classList.remove("font-sm");
@@ -90,6 +94,7 @@ function calculateFontSize() {
     }
 }
 
+// Função para copiar a senha
 function copyPassword(event) {
     navigator.clipboard.writeText(inputElement.value);
 

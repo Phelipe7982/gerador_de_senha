@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fontes do google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <!-- Nosso arquivo css para resetar a estilização padrão dos navegadores -->
     <link rel="stylesheet" href="./css/reset.css" />
+    <!-- Nosso arquivo de estilização principal -->
     <link rel="stylesheet" href="./css/style.css" />
-
+    <!-- Nosso arquivo de JavaScript -->
     <script src="./js/script.js" defer></script>
     <title>Gerador de Senhas</title>
 </head>
@@ -23,6 +26,7 @@
             <p class="subtitle">Utilize o nosso gerador online para gerar uma senha forte e segura.</p>
         </section>
 
+        <!-- Nossa section com os botões de copiar e gerar e o input -->
         <section class="box">
             <div class="password">
                 <div class="text">
@@ -38,11 +42,13 @@
                     </button>
                 </div>
             </div>
+            <!-- Nossa div com a barra indicadora de segurança -->
             <div class="security-indicator">
                 <div id="security-indicator-bar" class="bar completed"></div>
             </div>
         </section>
 
+        <!-- Nossa section com as opções de personalizar a senha -->
         <section class="box customize">
             <h3 class="title">Personalizar</h3>
             <div class="actions">
@@ -71,6 +77,7 @@
             </div>
         </section>
 
+        <!-- Nosso botão de copiar principal -->
         <div class="submit">
             <button id="copy2">Copiar Senha</button>
         </div>
